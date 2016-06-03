@@ -1,0 +1,62 @@
+// Breadcrumbs
+
+.breadcrumb {
+	margin: @breadcrumbs-content-margin 0 0 0;
+
+	&__wrapper {
+		.wrapper;
+		background: @breadcrumbs-bg-color;
+		color: @breadcrumbs-font-color;
+		border-top: 10px solid @main-green;
+	}
+    
+	+ h1 {
+		margin: 0 0 @breadcrumbs-content-margin 0;
+	}
+
+	a {
+		&, &:hover {
+			color: @breadcrumbs-font-color;
+		}
+	}
+}
+
+.media {
+	.media-left a, .media-right a{
+		display: block;
+		width: @image-media-width;
+	}
+}
+
+#page-about {
+	.media-left img{
+		margin-right: @image-contect-margin;
+		border-radius: @image-media-border-radious;
+	}
+}
+
+#page-service {
+	.media-right img {
+		margin: 0 0 @image-contect-margin @image-contect-margin ;
+		border-radius: @image-media-border-radious;
+	}	
+}
+
+// Certificate
+.certificate {
+	.wrapper;
+	background: #fff;
+	.row {
+		padding: 0;
+		li {
+			margin: 10px auto;
+		}
+	}
+
+	h2 { 
+		line-height: 3em;
+		text-align: center;
+		text-transform: uppercase;
+		color: @font-gray;
+	}
+}

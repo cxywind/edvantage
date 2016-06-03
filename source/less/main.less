@@ -1,0 +1,173 @@
+// Main 
+// Main - banner
+.banner {
+	&__wrapper {
+		.wrapper;
+		overflow: hidden;
+
+		.container-fluid {
+			padding: 0;
+
+			.carousel {
+				&-caption {
+					text-align: left;
+					color: @font-gray;
+					text-shadow: none;
+
+					> h2 {
+						color:#000;
+						margin: .5em 0;
+
+						+ p {
+							margin-bottom: 3em;
+						}
+					}
+
+					a[role=button] {
+						.button-default;
+						margin: 0 1em 0 0;
+
+						&:hover {
+							.button-hover
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Service
+.service {
+
+	> h2 {
+		color:darken(@font-gray, 15%);
+	}
+	> h3 {
+		.wrapper;
+	}
+	> p {
+		color:lighten(@font-gray, 20%);
+		margin-bottom: @wrapper-margin-vertical;
+	}
+	.row {
+		&__service {
+			text-align: center;
+			> div {
+				position: relative;
+			}
+			h3 {
+				color:darken(@font-gray, 15%);
+				font-size: 1.5em;
+			 	& + p {
+					text-align: left;
+				}
+			}
+			span.service__imgad {
+				display: none;
+				position: absolute;
+				color: #fff;
+				background: @main-green;
+				padding: 6px;
+				font-size: 1.5em;
+
+			}
+			a[role=button] {
+				&,&:link,&:visited {
+					.button-default;
+				}
+				&:hover {
+					.button-hover;
+				}
+			}
+		}
+		&__other-service {
+			.media .media-left > i {
+				.button-default;
+				.circle-icon;
+			}
+			.media-heading {
+				color:@main-green;
+			}
+		}
+	}
+}
+
+// Main - custmer testimonials
+.customers {
+		.wrapper;
+		background: rgba(6, 6, 6, 0.7);
+
+	&__wrapper {
+		background: url('../images/bg-customer.jpg') @gray center center;
+		//opacity: .3;
+		background-size:cover;
+
+	}
+	.carousel .item {
+		text-align: center;
+		overflow: hidden;
+		height: 33em;
+
+		& > div > img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+		& > p {
+			width: 75%;
+			top: 10%;
+			margin: 0 auto;
+			text-align: left;
+			background: rgba(255, 255, 255, 0.35);
+			padding: 2.5em 3em;
+			color:#fff;
+			border-radius: 4px;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 0;
+    			height: 0;
+    			border-left: 1em solid transparent;
+    			border-right: 1em solid transparent;
+   				border-top: 1.5em solid rgba(255, 255, 255, 0.35);
+   				left:50%;
+   				margin-left:-1em;
+   				top:100%;
+			}
+		}
+		.carousel-caption {
+
+			& > img { 
+				margin:0 0 3em 0;
+
+				& + p {
+					color: @main-green;
+					text-transform: capitalize;
+				}
+			}
+
+			& > p {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.carousel-control {
+		position: absolute;
+		top: 50%;
+		> span {
+			width: 2em;
+			height:2em;
+			border-radius: 50%;
+			border: 2px solid @gray;
+			line-height: 1.8em;
+			text-align: center;
+		}
+	}
+}
+
+// advantages
+.panel-default > .panel-heading {
+	.button-default;
+}
